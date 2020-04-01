@@ -11,14 +11,14 @@ app.use(bodyParser.json());
 
 app.post("/todos", (req, res) => {
   const newUser = new User({
-    text: req.body.Text
+    text: req.body.text
   });
   newUser.save().then(
     doc => {
       res.send(doc);
     },
     err => {
-      console.log(err);
+      res.status(400).send(err);
     }
   );
 });
