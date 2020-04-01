@@ -75,25 +75,73 @@
 //   client.close();
 // });
 
-const { MongoClient, ObjectID } = require("mongodb");
-const assert = require("assert");
+// const { MongoClient, ObjectID } = require("mongodb");
+// const assert = require("assert");
 
-const urlConnect = "mongodb://localhost:27017";
-const dbName = "shopping";
+// const urlConnect = "mongodb://localhost:27017";
+// const dbName = "shopping";
 
-let client = new MongoClient(urlConnect);
+// let client = new MongoClient(urlConnect);
 
-client.connect((err, client) => {
-  assert.equal(null, err);
-  const db = client.db(dbName);
-  db.collection("users")
-    .find()
-    .skip(2)
-    .toArray()
-    .then(docs => {
-      console.log("---------------------------------------");
-      console.log(JSON.stringify(docs, undefined, 4));
-      console.log("---------------------------------------");
-    });
-  client.close();
-});
+// client.connect((err, client) => {
+//   assert.equal(null, err);
+//   const db = client.db(dbName);
+//   db.collection("users")
+//     .find()
+//     .skip(2)
+//     .toArray()
+//     .then(docs => {
+//       console.log("---------------------------------------");
+//       console.log(JSON.stringify(docs, undefined, 4));
+//       console.log("---------------------------------------");
+//     });
+//   client.close();
+// });
+
+// const { MongoClient, ObjectID } = require("mongodb");
+// const assert = require("assert");
+
+// const urlConnect = "mongodb://localhost:27017";
+// const dbName = "shopping";
+
+// let client = new MongoClient(urlConnect);
+
+// client.connect((err, client) => {
+//   assert.equal(null, err);
+//   const db = client.db(dbName);
+//   db.collection("users").findOneAndDelete({ name: "hassan" }, result => {
+//     console.log(result);
+//   });
+//   client.close();
+// });
+
+// const { MongoClient, ObjectID } = require("mongodb");
+// const assert = require("assert");
+
+// const urlConnect = "mongodb://localhost:27017";
+// const dbName = "shopping";
+
+// let client = new MongoClient(urlConnect);
+
+// client.connect((err, client) => {
+//   assert.equal(null, err);
+//   const db = client.db(dbName);
+//   db.collection("users").findOneAndUpdate(
+//     { name: "mostafa" },
+//     {
+//       $set: {
+//         name: "mostafa"
+//       },
+//       $inc: {
+//         age: 1
+//       }
+//     },
+//     {
+//       returnOriginal: true
+//     },
+//     result => {
+//       console.log(result);
+//     }
+//   );
+//   client.close();
+// });
