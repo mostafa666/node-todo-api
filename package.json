@@ -13,7 +13,7 @@
     "body-parser": "^1.19.0",
     "expect": "^25.2.4",
     "express": "^4.17.1",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.6",
     "supertest": "^4.0.2"
